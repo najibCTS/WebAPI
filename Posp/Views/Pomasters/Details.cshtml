@@ -1,0 +1,36 @@
+﻿@model Posp.Models.Pomaster
+
+<div>
+    <h4>Pomaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PODATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PODATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUPLNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUPLNO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PONO.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

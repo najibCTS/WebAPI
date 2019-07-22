@@ -1,0 +1,36 @@
+﻿@model Posp.Models.Podetail
+
+<div>
+    <h4>Podetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QTY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QTY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { pono = Model.PONO.Trim(), itcode = Model.ITCODE.Trim() }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

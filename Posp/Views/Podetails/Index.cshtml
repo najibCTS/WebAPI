@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Posp.Models.Podetail>
+
+<hr/>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITCODE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QTY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITCODE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QTY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { pono=item.PONO.Trim(), itcode=item.ITCODE.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { pono = item.PONO.Trim(), itcode = item.ITCODE.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { pono = item.PONO.Trim(), itcode = item.ITCODE.Trim() })
+        </td>
+    </tr>
+}
+
+</table>
